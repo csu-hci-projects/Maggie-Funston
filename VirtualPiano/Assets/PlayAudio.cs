@@ -1,34 +1,30 @@
-using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class NotePlayer : MonoBehaviour
+public class PlayAudio : MonoBehaviour
 {
-    bool isActive = false;
-    AudioSource audioSource;
-    public AudioClip audioClip;
-    public string note;
+    //public AudioSource pianoSound;
+    bool isPressed = false;
+
     void Start()
     {
         Physics.IgnoreLayerCollision(6, 6, true);
-
         Debug.Log("LOADED NOTE PLAYER");
-
-        audioSource = GetComponent<AudioSource>();
     }
 
     void Update(){
-        if((this.transform.position.y < 1.3f) && (isActive == false)){
+        if((this.transform.position.y < 1.3f) && (isPressed == false)){
             this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y+0.01f, this.transform.position.z);
         }
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if ((collision.relativeVelocity.magnitude > 0.7)) {
+        if ((collision.relativeVelocity.magnitude > 0.1)) {
             Debug.Log("collision occured");
-            Debug.Log(collision.gameObject.transform.parent.name + " " + note + " " + collision.relativeVelocity.magnitude);
-            isActive = true;
-            audioSource.PlayOneShot(audioClip, 1.0f);
+            isPressed = true;
+            //pianoSound.Play();
             this.transform.position = new Vector3(this.transform.position.x, 1.2f, this.transform.position.z);
         }
 
@@ -36,6 +32,7 @@ public class NotePlayer : MonoBehaviour
     void OnCollisionExit(Collision collision)
     {
         Debug.Log("letting go");
-        isActive = false;
+        //pianoSound.Stop();
+        isPressed = false;
     }
 }
