@@ -21,7 +21,7 @@ public class PlayAudio : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if ((collision.relativeVelocity.magnitude > 0.1)) {
+        if ((collision.relativeVelocity.magnitude > 0.3)) {
             Debug.Log("collision occured");
             isPressed = true;
             //pianoSound.Play();
