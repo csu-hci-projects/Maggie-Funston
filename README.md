@@ -5,4 +5,4 @@ This project is a virtual piano aimed at determining if a virtual piano is a sui
 - Download Unity
 - Download the Ultraleap Gemini (V5.2+) Hand Tracking Software (https://developer.leapmotion.com/tracking-software-download)
 - Download Blender (https://www.blender.org/download/)
-- My Project is under VirtualPiano/Assets/Scenees/MiddleSection.unity
+- My Project is under VirtualPiano/Assets/Scenees/K34-K49.unity
