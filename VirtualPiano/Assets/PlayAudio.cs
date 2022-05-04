@@ -39,9 +39,9 @@ public class PlayAudio : MonoBehaviour
             Debug.Log("collision occured");
             isPressed = true;
             Debug.Log(audioSource.time);
-            audioSource.time = 2f;
+            audioSource.time = 1f;
             audioSource.Play();
-            StartCoroutine(StartFade(audioSource, 5f, 0.1f));
+            StartCoroutine(StartFade(audioSource, 3f, 0.1f));
             this.transform.position = new Vector3(this.transform.position.x, 1.2f, this.transform.position.z);
         }
 
