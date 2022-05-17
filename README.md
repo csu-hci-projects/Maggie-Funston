@@ -5,7 +5,15 @@ This project is a virtual piano aimed at determining if a virtual piano is a sui
 - Download Unity
 - Download the Ultraleap Gemini (V5.2+) Hand Tracking Software (https://developer.leapmotion.com/tracking-software-download)
 - Download Blender (https://www.blender.org/download/)
-- My Project is under VirtualPiano/Assets/Scenees/K34-K49.unity
+- My Project is located under VirtualPiano/Assets/Scenes/
+  - Any of the following files work to play the piano:
+    - Octaves-1-2.unity
+    - Octaves-2-3.unity
+    - Octaves-3-4.unity
+    - Octaves-4-5.unity
+    - Octaves-5-6.unity
+    - Octaves-6-7.unity
+
 
 
 Checkpoint 2: https://youtu.be/p0MuRs33UWg
